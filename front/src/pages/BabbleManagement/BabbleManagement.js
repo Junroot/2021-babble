@@ -4,15 +4,17 @@ import { AdminManagement, GameManagement, TagManagement } from '../../chunks';
 
 import { Headline1 } from '../../core/Typography';
 import React from 'react';
+import SliderManagement from '../../chunks/SliderManagement/SliderManagement';
 
 const BabbleManagement = () => {
   return (
-    <div className='management-container'>
+    <main className='management-container'>
       <Headline1>관리자 페이지</Headline1>
       <AdminManagement />
+      <SliderManagement />
       <GameManagement />
       <TagManagement />
-    </div>
+    </main>
   );
 };
 

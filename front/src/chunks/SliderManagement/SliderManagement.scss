@@ -1,0 +1,54 @@
+@use '../../../style/mixins' as m;
+@use '../../../style/functions' as f;
+
+.slider-management-container {
+  @include m.top-left-indents;
+
+  border: 1px solid #d8e0e7;
+  border-radius: 1rem;
+  padding: 3rem;
+
+  .banner-image-editor {
+    @include m.top-left-indents;
+
+    .control {
+      margin-bottom: 1rem;
+
+      button {
+        border: 1px solid black;
+        border-radius: 12px;
+        padding: 3px 7px;
+      }
+    }
+
+    .preview {
+      height: 24rem;
+      width: 100%;
+      border: 1px solid grey;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1rem 3rem;
+
+      .register {
+        border-bottom: 1px solid black;
+        font-size: 2rem;
+        display: block;
+        margin-bottom: 1rem;
+        width: 20%;
+        min-width: 20rem;
+      }
+
+      .main-text-register {
+        font-size: 4rem;
+        resize: none;
+        width: 40%;
+        min-width: 40rem;
+
+        &:focus {
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+}

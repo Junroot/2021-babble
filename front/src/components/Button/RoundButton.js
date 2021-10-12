@@ -7,14 +7,14 @@ const RoundButton = ({
   size = 'medium',
   type = 'button',
   colored = false,
-  onClick,
+  onClickButton,
   children,
 }) => {
   return (
     <button
       type={type}
       className={`round-button ${size} ${colored ? 'colored' : 'line'}`}
-      onClick={onClick}
+      onClick={onClickButton}
     >
       {children}
     </button>
@@ -23,9 +23,9 @@ const RoundButton = ({
 
 RoundButton.propTypes = {
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'block']),
-  type: PropTypes.oneOf(['button', 'submit']),
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
   colored: PropTypes.bool,
-  onClick: PropTypes.func,
+  onClickButton: PropTypes.func,
   children: PropTypes.node,
 };
 
